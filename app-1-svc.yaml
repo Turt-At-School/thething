@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: app-1
   labels:
-    run: my-app-1
+    run: app-1-sui
 spec:
   selector:
     app: app-1
-    run: my-app-1
+    run: app-1-sui
   ports:
   - protocol: TCP
     port: 8080
