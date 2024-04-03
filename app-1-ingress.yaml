@@ -2,13 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: app-1-ingress
-  labels:
-    app: nginx-canary
   annotations:
-    nginx.ingress.kubernetes.io/canary: "true"
-    nginx.ingress.kubernetes.io/canary-weight: "70"
-    nginx.ingress.kubernetes.io/canary-by-header: "cookie"
-    nginx.ingress.kubernetes.io/canary-by-header-value: "app1"
+    kubernetes.io/ingress.class: nginx
+    # nginx.ingress.kubernetes.io/canary: "true"
+    # nginx.ingress.kubernetes.io/canary-weight: "70"
+    nginx.ingress.kubernetes.io/rewrite-target: / # modify path before sending to nginx-svc
+
 spec:
   rules:
   - http:

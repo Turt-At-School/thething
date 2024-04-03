@@ -2,14 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/canary-weight: "30"
 spec:
   rules:
   - http:
       paths:
-      - path: /nginx
+      - path: /
         pathType: Prefix
         backend:
           service:
             name: my-nginx
             port:
-              number: 8080
+              number: 80
