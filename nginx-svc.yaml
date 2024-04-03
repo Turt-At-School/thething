@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginxsui
+  name: nginx-svc
   labels:
-    run: nginxsui
+    run: nginx-svc
 spec:
   type: ClusterIP
   ports:
@@ -11,4 +11,4 @@ spec:
     protocol: TCP
 
   selector:
-    run: nginxsui
+    run: nginx-svc
