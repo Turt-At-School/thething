@@ -18,4 +18,4 @@ spec:
       - name: app-1
         image: ghcr.io/denoslab/ensf400-sample-app:v1
         ports:
-        - containerPort: 3000 
+        - containerPort: 3000 # This is the port that the container is listening on so it needs to be accessed

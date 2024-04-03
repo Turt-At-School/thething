@@ -10,5 +10,6 @@ spec:
     run: app-1-sui
   ports:
   - protocol: TCP
-    port: 8080
-    targetPort: 3000
+    port: 8080 # The port that is exposed
+    targetPort: 3000 # What is being used 
+    

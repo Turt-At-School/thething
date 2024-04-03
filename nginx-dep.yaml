@@ -19,6 +19,8 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 8080
+
+        # Mounting the config map 
         volumeMounts:
         - name: config-volume
           mountPath: /etc/nginx/nginx.conf

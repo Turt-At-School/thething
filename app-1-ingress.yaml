@@ -4,18 +4,18 @@ metadata:
   name: app-1-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
-    # nginx.ingress.kubernetes.io/canary: "true"
-    # nginx.ingress.kubernetes.io/canary-weight: "70"
-    nginx.ingress.kubernetes.io/rewrite-target: / # modify path before sending to nginx-svc
+    nginx.ingress.kubernetes.io/rewrite-target: / 
+    # No need to add canary weights as the other file specifies them
+
 
 spec:
   rules:
   - http:
       paths:
-      - path: /app
+      - path: /app # What will be called upon
         pathType: Prefix
         backend:
           service:
-            name: app-1
+            name: app-1 # What it will be rerouted towards 
             port:
-              number: 8080
+              number: 8080 # Will run on port 8080

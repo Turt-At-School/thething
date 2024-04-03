@@ -3,13 +3,13 @@ kind: Service
 metadata:
   name: app-2
   labels:
-    run: my-app-2
+    run: app-2-sui
 spec:
   selector:
     app: app-2
-    run: my-app-2
+    run: app-2-sui
 
   ports:
-    - port: 8080 # Default port for image
+    - port: 8080 
       targetPort: 3000
       protocol: TCP
