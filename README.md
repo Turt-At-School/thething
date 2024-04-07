@@ -1,6 +1,6 @@
-# ENSF400A3LionelHasan
+# ENSF400A3
 
-# To properly run this lab, the following commands must be ran in order ideally:
+# To run this lab, run the following commands in the same directory as the files:
 
 1. minikube start
 2. minikube addons enable ingress
@@ -27,12 +27,12 @@
 
 The output for the nginx service can be seen below: 
 
-![alt text](image.png)
+![alt text](Image1.png)
 
 5. **Write deployment and svc files for App-1 and App-2**: The deployment and service files can be seen in app-1-dep.yaml, app-1-svc.yaml, app-2-dep.yaml, app-2-svc.yaml 
-6. **Ingress file to set up Canary deployment :** The app-1-ingress.yaml and app-2-ingress.yaml files will redirect 70% of the requests to /app to app-1 and 30% of the requests to 30% using a canary deployment. 
+6. **Ingress file to set up Canary deployment :** The app-1-ingress.yaml and app-2-ingress.yaml files will redirect 70% of the requests to /app to app-1 and 30% of the requests to app-2 using a canary deployment. 
 
 The output for the canary deployment can be seen below: 
 
 
-![alt text](image-1.png)
+![alt text](Image2.png)
